@@ -99,7 +99,17 @@ export class GanttTableComponent implements OnChanges {
 
     expandChildren(event: MouseEvent, item: GanttItemInternal) {
         event.stopPropagation();
+
+        // Expande los hijos del objeto Gantt
         this.gantt.expandChildren(item);
+
+        // Obtiene los hijos del objeto Gantt que acabamos de expandir
+        const children = item.children;
+
+        // Itera sobre cada hijo y llama a la función de nuevo con el hijo como parámetro
+        for (const child of children) {
+            this.expandChildren(event, child);
+        }
     }
 
     dragStarted(event: CdkDragStart) {
