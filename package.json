@@ -1,7 +1,7 @@
 {
-  "name": "@worktile/gantt",
+  "name": "@alvarosinmarca/gantt",
   "version": "14.0.2",
-  "description": "A modern and powerful gantt chart component for Angular",
+  "description": "(Folk of @worktile/gantt) A modern and powerful gantt chart component for Angular",
   "keywords": [
     "gantt",
     "angular gantt",
